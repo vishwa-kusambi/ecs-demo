@@ -8,12 +8,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout') {
-      steps {
-        git 'https://github.com/vishwa-kusambi/ecs-demo.git'
-      }
-    }
-
     stage('Build') {
       steps {
         sh 'docker build -t my-app .'
